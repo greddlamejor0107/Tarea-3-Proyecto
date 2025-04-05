@@ -1,4 +1,7 @@
 
+<h2>Lista de Contactos ({contacts.length})</h2>
+=======
+
 const handleAddContact = () => {
     if (!formData.name || !formData.email) {
         alert("El nombre y el correo electrónico son obligatorios.");
@@ -52,5 +55,6 @@ const [contacts, setContacts] = useState(() => {
 useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
 }, [contacts]);
+
 
 
