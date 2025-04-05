@@ -1,4 +1,19 @@
 
+const handleClearContacts = () => {
+    if (window.confirm("¿Seguro que quieres eliminar todos los contactos?")) {
+        setContacts([]);
+    }
+};
+
+// Añadir el botón al render
+<button 
+    onClick={handleClearContacts} 
+    style={{ backgroundColor: 'red', color: 'white', marginTop: '10px' }}
+>
+    Eliminar Todos
+</button>
+=======
+
 <h2>Lista de Contactos ({contacts.length})</h2>
 =======
 
@@ -55,6 +70,7 @@ const [contacts, setContacts] = useState(() => {
 useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
 }, [contacts]);
+
 
 
 
